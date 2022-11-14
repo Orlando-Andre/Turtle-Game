@@ -1,7 +1,5 @@
 # Turtle-Game
  
- ![tartaruga](https://github.com/Orlando-Andre/Turtle-Game/blob/main/images/tartaruga.png) 
- 
  <p align="center">
   <img src="https://github.com/Orlando-Andre/Turtle-Game/blob/main/images/tartaruga.png"/>
 </p>

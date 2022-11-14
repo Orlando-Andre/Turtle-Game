@@ -35,3 +35,5 @@ Peixe azul     + 3pts
 
 Para rodar este projeto localmente basta fazer o download da ferramenta [greenfoot](https://www.greenfoot.org/download)  
 Para jogar basta clique [aqui](https://www.greenfoot.org/scenarios/30272) 
+
+Me siga [LinkedIn](https://www.linkedin.com/in/orlando-andr%C3%A9-1a3099229/) 

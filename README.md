@@ -4,14 +4,14 @@
 Turtle game  um jogo simples  desenvolvido em java, a fim de aprimorar os conceitos estudados de POO e herança simples.
 
 
-Ferramentas: Greenfoot 
+Ferramentas: Greenfoot <b />
 Projeto: Acadêmico 
 
-## Sobre o jogo 
+### Sobre o jogo 
 
 O objetivo é pegar todos os peixinhos coloridos, dourados e azuis. O jogo termina quando as vidas da tartaruga chegar a zero.
 
-## Pontuação 
+### Pontuação 
 
 Peixe colorido + 1pts 
 Peixe dourado  + 2pts

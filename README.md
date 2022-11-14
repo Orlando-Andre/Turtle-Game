@@ -4,7 +4,7 @@
 Turtle game  um jogo simples  desenvolvido em java, a fim de aprimorar os conceitos estudados de POO e herança simples.
 
 
-Ferramentas: Greenfoot <b />
+Ferramentas: Greenfoot  
 Projeto: Acadêmico 
 
 ### Sobre o jogo 

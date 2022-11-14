@@ -1,5 +1,6 @@
 # Turtle-Game
  
+ ![tartaruga](https://github.com/Orlando-Andre/Turtle-Game/blob/main/images/tartaruga.png)
  
 Turtle game  um jogo simples  desenvolvido em java, a fim de aprimorar os conceitos estudados de POO e herança simples.
 

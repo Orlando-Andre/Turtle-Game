@@ -7,18 +7,18 @@ Turtle game  um jogo simples  desenvolvido em java, a fim de aprimorar os concei
 Ferramentas: Greenfoot  
 Projeto: Acadêmico 
 
-### Sobre o jogo 
+##### Sobre o jogo 
 
 O objetivo é pegar todos os peixinhos coloridos, dourados e azuis. O jogo termina quando as vidas da tartaruga chegar a zero.
 
-### Pontuação 
+##### Pontuação 
 
 Peixe colorido + 1pts  
 Peixe dourado  + 2pts  
 Peixe azul     + 3pts  
 
 
-## Dimensões 
+##### Dimensões 
 Background    1200x675 px  
 Tartaruga     120x94   px  
 Arraia        147x94   px  

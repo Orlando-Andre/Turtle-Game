@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="peixeAzul" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the peixeAzul wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="move(-4)" expression-java="move(-4)" enable="true"/>
+                <if condition="isAtEdge()" condition-java="isAtEdge()" enable="true">
+                    <ifStatements>
+                        <variable type="MyWorld" type-java="MyWorld" name="w" value="(MyWorld)getWorld()" value-java="(MyWorld)getWorld()" enable="true"/>
+                        <assign dest="w.peixeAzul" dest-java="w.peixeAzul" src="w.peixeAzul+1" src-java="w.peixeAzul + 1" enable="true"/>
+                        <call expression="w.removeObject(this)" expression-java="w.removeObject(this)" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+    </methods>
+</class>

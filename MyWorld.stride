@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="MyWorld" extends="World" extends-java="World" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields>
+        <variable access="public" type="int" type-java="int" name="arraia" value="3" value-java="3" enable="true"/>
+        <variable access="public" type="int" type-java="int" name="arraiaRapida" value="2" value-java="2" enable="true"/>
+        <variable access="public" type="int" type-java="int" name="peixeColorido" value="3" value-java="3" enable="true"/>
+        <variable access="public" type="int" type-java="int" name="peixeDourado" value="2" value-java="2" enable="true"/>
+        <variable access="public" type="int" type-java="int" name="peixeAzul" value="1" value-java="1" enable="true"/>
+        <variable access="public" type="int" type-java="int" name="score" value="0" value-java="0" enable="true"/>
+        <variable access="public" type="int" type-java="int" name="vidas" value="500" value-java="500" enable="true"/>
+    </fields>
+    <constructors>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve">Constructor for objects of class MyWorld.</javadoc>
+            <params/>
+            <throws/>
+            <delegate target="super" params="1200,675,1" params-java="1200, 675, 1"/>
+            <body>
+                <call expression="prepare()" expression-java="prepare()" enable="true"/>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="this.showText(&quot;Pontuação: &quot;+score+&quot; \n&quot;+&quot;Vidas: &quot;+vidas,100,50)" expression-java="this.showText(&quot;Pontuação: &quot; + score + &quot; \n&quot; + &quot;Vidas: &quot; + vidas, 100, 50)" enable="true"/>
+                <if condition="vidas==0" condition-java="vidas == 0" enable="true">
+                    <ifStatements>
+                        <call expression="this.showText(&quot;GAME OVER&quot;+&quot;\n&quot;+&quot;Pontuação: &quot;+score,600,300)" expression-java="this.showText(&quot;GAME OVER&quot; + &quot;\n&quot; + &quot;Pontuação: &quot; + score, 600, 300)" enable="true"/>
+                        <call expression="Greenfoot.stop()" expression-java="Greenfoot.stop()" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="arraia&gt;0" condition-java="arraia &gt; 0" enable="true">
+                    <ifStatements>
+                        <variable type="arraia" type-java="arraia" name="a" value="new arraia()" value-java=" new arraia()" enable="true"/>
+                        <call expression="addObject(a,1289,Greenfoot.getRandomNumber(670))" expression-java="addObject(a, 1289, Greenfoot.getRandomNumber(670))" enable="true"/>
+                        <assign dest="arraia" dest-java="arraia" src="arraia-1" src-java="arraia - 1" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="arraiaRapida&gt;0" condition-java="arraiaRapida &gt; 0" enable="true">
+                    <ifStatements>
+                        <variable type="arraiaRapida" type-java="arraiaRapida" name="arraiaR" value="new arraiaRapida()" value-java=" new arraiaRapida()" enable="true"/>
+                        <call expression="addObject(arraiaR,1289,Greenfoot.getRandomNumber(670))" expression-java="addObject(arraiaR, 1289, Greenfoot.getRandomNumber(670))" enable="true"/>
+                        <assign dest="arraiaRapida" dest-java="arraiaRapida" src="arraiaRapida-1" src-java="arraiaRapida - 1" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="peixeColorido&gt;0" condition-java="peixeColorido &gt; 0" enable="true">
+                    <ifStatements>
+                        <variable type="peixeColorido" type-java="peixeColorido" name="pC" value="new peixeColorido()" value-java=" new peixeColorido()" enable="true"/>
+                        <call expression="addObject(pC,-15,Greenfoot.getRandomNumber(670))" expression-java="addObject(pC, -15, Greenfoot.getRandomNumber(670))" enable="true"/>
+                        <assign dest="peixeColorido" dest-java="peixeColorido" src="peixeColorido-1" src-java="peixeColorido - 1" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="peixeDourado&gt;0" condition-java="peixeDourado &gt; 0" enable="true">
+                    <ifStatements>
+                        <variable type="peixeDourado" type-java="peixeDourado" name="pD" value="new peixeDourado()" value-java=" new peixeDourado()" enable="true"/>
+                        <call expression="addObject(pD,1289,Greenfoot.getRandomNumber(670))" expression-java="addObject(pD, 1289, Greenfoot.getRandomNumber(670))" enable="true"/>
+                        <assign dest="peixeDourado" dest-java="peixeDourado" src="peixeDourado-1" src-java="peixeDourado - 1" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="peixeAzul&gt;0" condition-java="peixeAzul &gt; 0" enable="true">
+                    <ifStatements>
+                        <variable type="peixeAzul" type-java="peixeAzul" name="pA" value="new peixeAzul()" value-java=" new peixeAzul()" enable="true"/>
+                        <call expression="addObject(pA,1289,Greenfoot.getRandomNumber(670))" expression-java="addObject(pA, 1289, Greenfoot.getRandomNumber(670))" enable="true"/>
+                        <assign dest="peixeAzul" dest-java="peixeAzul" src="peixeAzul-1" src-java="peixeAzul - 1" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+        <method access="private" type="void" type-java="void" name="prepare" enable="true">
+            <javadoc xml:space="preserve">Prepare the world for the start of the program.
+That is: create the initial objects and add them to the world.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="tartaruga" type-java="tartaruga" name="tartaruga" value="new tartaruga()" value-java=" new tartaruga()" enable="true"/>
+                <call expression="addObject(tartaruga,73,325)" expression-java="addObject(tartaruga, 73, 325)" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>

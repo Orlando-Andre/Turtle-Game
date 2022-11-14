@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="tartaruga" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">Act - do whatever the tartaruga wants to do. This method is called whenever the 'Act' or 'Run' button gets pressed in the environment.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="mover()" expression-java="mover()" enable="true"/>
+            </body>
+        </method>
+        <method access="public" type="void" type-java="void" name="mover" enable="true">
+            <javadoc xml:space="preserve"/>
+            <params/>
+            <throws/>
+            <body>
+                <if condition="Greenfoot.isKeyDown(&quot;space&quot;)" condition-java="Greenfoot.isKeyDown(&quot;space&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="move(3)" expression-java="move(3)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="Greenfoot.isKeyDown(&quot;left&quot;)" condition-java="Greenfoot.isKeyDown(&quot;left&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="turn(-5)" expression-java="turn(-5)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="Greenfoot.isKeyDown(&quot;right&quot;)" condition-java="Greenfoot.isKeyDown(&quot;right&quot;)" enable="true">
+                    <ifStatements>
+                        <call expression="turn(5)" expression-java="turn(5)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <variable type="MyWorld" type-java="MyWorld" name="w" value="(MyWorld)getWorld()" value-java="(MyWorld)getWorld()" enable="true"/>
+                <if condition="isTouching(peixeColorido.class)" condition-java="isTouching(peixeColorido.class)" enable="true">
+                    <ifStatements>
+                        <call expression="removeTouching(peixeColorido.class)" expression-java="removeTouching(peixeColorido.class)" enable="true"/>
+                        <assign dest="w.peixeColorido" dest-java="w.peixeColorido" src="w.peixeColorido+1" src-java="w.peixeColorido + 1" enable="true"/>
+                        <assign dest="w.score" dest-java="w.score" src="w.score+1" src-java="w.score + 1" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="isTouching(peixeDourado.class)" condition-java="isTouching(peixeDourado.class)" enable="true">
+                    <ifStatements>
+                        <call expression="removeTouching(peixeDourado.class)" expression-java="removeTouching(peixeDourado.class)" enable="true"/>
+                        <assign dest="w.peixeDourado" dest-java="w.peixeDourado" src="w.peixeDourado+1" src-java="w.peixeDourado + 1" enable="true"/>
+                        <assign dest="w.score" dest-java="w.score" src="w.score+2" src-java="w.score + 2" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="isTouching(peixeAzul.class)" condition-java="isTouching(peixeAzul.class)" enable="true">
+                    <ifStatements>
+                        <call expression="removeTouching(peixeAzul.class)" expression-java="removeTouching(peixeAzul.class)" enable="true"/>
+                        <assign dest="w.peixeAzul" dest-java="w.peixeAzul" src="w.peixeAzul+1" src-java="w.peixeAzul + 1" enable="true"/>
+                        <assign dest="w.score" dest-java="w.score" src="w.score+3" src-java="w.score + 3" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="isTouching(arraia.class)||isTouching(arraiaRapida.class)" condition-java="isTouching(arraia.class) || isTouching(arraiaRapida.class)" enable="true">
+                    <ifStatements>
+                        <assign dest="w.vidas" dest-java="w.vidas" src="w.vidas-1" src-java="w.vidas - 1" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+    </methods>
+</class>
